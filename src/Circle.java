@@ -3,7 +3,7 @@
 //Description: This class creates a circle
 
 
-public class Circle {
+public class Circle implements Shape {
 
 
 	//Variables
@@ -24,7 +24,7 @@ public class Circle {
 
 	//Setters
 	public void setRadius(double _radius) {
-		radius = radius;
+		radius = _radius;
 	}
 
 
@@ -51,10 +51,11 @@ public class Circle {
 	public boolean equals(Object o) {
 		if(o instanceof Circle) {
 			Circle c = (Circle) o;
-			return radius == c.getRadius;
+			return radius == c.getRadius();
 		}
 		else
 			return false;
 	}
+
 
 }//class
